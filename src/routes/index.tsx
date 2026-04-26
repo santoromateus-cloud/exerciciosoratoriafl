@@ -186,9 +186,7 @@ function SalesPage() {
             <span className="numeral-display tabular-nums">{now}</span>
           </div>
           <a
-            href={CHECKOUT_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#oferta"
             className="rounded-full border border-foreground/30 px-3 py-1 text-foreground/80 transition hover:border-gold hover:text-gold-deep"
           >
             R$ 47
