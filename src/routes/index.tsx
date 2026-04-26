@@ -222,9 +222,6 @@ function SalesPage() {
 
               <div className="reveal reveal-delay-2 mt-8 flex items-center gap-4">
                 <Waveform className="h-10 w-40 text-gold" bars={26} />
-                <span className="text-xs uppercase tracking-[0.3em] text-cream/55">
-                  treino de voz ao vivo
-                </span>
               </div>
 
               <div className="reveal reveal-delay-3 mt-10 max-w-sm">

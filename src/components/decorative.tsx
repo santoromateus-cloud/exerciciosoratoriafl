@@ -105,18 +105,63 @@ export function OrnamentRule({ className = "" }: { className?: string }) {
   );
 }
 
-/** Editorial section index marker like "N° 03 / Capítulo" */
+/** Editorial section index marker — bold numeral + vertical rule + label */
 export function SectionMark({
   number,
   label,
   className = "",
 }: { number: string; label: string; className?: string }) {
   return (
-    <div className={`flex items-center gap-3 text-xs uppercase tracking-[0.25em] ${className}`}>
-      <span className="font-display text-lg italic lowercase tracking-normal">N°</span>
-      <span className="numeral-display text-lg">{number}</span>
-      <span className="h-px w-10 bg-current opacity-50" />
-      <span className="font-medium">{label}</span>
+    <div className={`flex items-stretch gap-4 ${className}`}>
+      <div className="flex flex-col items-center">
+        <span className="text-[10px] uppercase tracking-[0.35em] opacity-60">N°</span>
+        <span className="numeral-display text-5xl font-bold leading-none sm:text-6xl">
+          {number}
+        </span>
+        <span className="mt-2 h-10 w-px bg-current opacity-30" />
+      </div>
+      <div className="flex flex-col justify-end pb-1">
+        <span className="text-[10px] uppercase tracking-[0.4em] opacity-60">capítulo</span>
+        <span className="font-display text-base font-semibold uppercase tracking-[0.18em] sm:text-lg">
+          {label}
+        </span>
+      </div>
+    </div>
+  );
+}
+
+/** Animated section divider — a self-drawing line with a center diamond */
+export function SectionDivider({ className = "" }: { className?: string }) {
+  const leftRef = useRef<SVGPathElement>(null);
+  const rightRef = useRef<SVGPathElement>(null);
+  useEffect(() => {
+    const targets = [leftRef.current, rightRef.current].filter(Boolean) as SVGPathElement[];
+    if (!targets.length) return;
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) {
+            targets.forEach((t) => t.classList.add("draw-line"));
+            io.disconnect();
+          }
+        }
+      },
+      { threshold: 0.4 }
+    );
+    io.observe(targets[0]);
+    return () => io.disconnect();
+  }, []);
+  return (
+    <div className={`flex items-center justify-center gap-4 ${className}`} aria-hidden>
+      <svg viewBox="0 0 200 4" className="h-1 w-32 sm:w-48" preserveAspectRatio="none">
+        <path ref={leftRef} d="M0 2 L200 2" fill="none" stroke="currentColor" strokeWidth="1" />
+      </svg>
+      <svg viewBox="0 0 24 24" className="h-3 w-3 rotate-45 opacity-80">
+        <rect x="4" y="4" width="16" height="16" fill="currentColor" />
+      </svg>
+      <svg viewBox="0 0 200 4" className="h-1 w-32 sm:w-48" preserveAspectRatio="none">
+        <path ref={rightRef} d="M0 2 L200 2" fill="none" stroke="currentColor" strokeWidth="1" />
+      </svg>
     </div>
   );
 }
