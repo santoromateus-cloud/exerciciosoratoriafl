@@ -77,7 +77,6 @@ export function StickyCTA({
 
   if (!active) return null;
 
-  return (
   const targetHref = active.href ?? href;
   const isExternal = targetHref.startsWith("http");
 
