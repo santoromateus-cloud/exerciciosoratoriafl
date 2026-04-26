@@ -29,14 +29,13 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "30 Exercícios de Confiança para Falar em Público | Flávia Lucas" },
+      { name: "description", content: "Fale em público sem travar em 1-2 horas. Voz firme na próxima apresentação, reunião ou entrevista, com 30 exercícios práticos." },
+      { name: "author", content: "Flávia Lucas" },
+      { property: "og:title", content: "30 Exercícios de Confiança para Falar em Público" },
+      { property: "og:description", content: "Voz firme em apenas 2 horas de prática. Sem decorar roteiro." },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       {
