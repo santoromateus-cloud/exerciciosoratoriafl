@@ -325,7 +325,7 @@ function SalesPage() {
       </section>
 
       {/* ============== PAIN ============== */}
-      <section className="relative overflow-hidden bg-secondary/50 py-20 sm:py-28">
+      <section id="dobra-dor" className="relative overflow-hidden bg-secondary/50 py-20 sm:py-28">
         <div aria-hidden className="absolute inset-0 noise opacity-50" />
         <div className="relative mx-auto max-w-3xl px-5">
           <SectionMark number="02" label="Os pensamentos que te param" className="reveal text-foreground/70" />
