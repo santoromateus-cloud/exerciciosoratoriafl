@@ -713,14 +713,14 @@ function SalesPage() {
         hideOverIds={["dobra-hero", "oferta", "dobra-final"]}
         items={[
           { id: "dobra-depoimentos", tag: "Capítulo 01", label: "Quero esse resultado", hint: "Voz firme em 1 a 2 horas" },
-          { id: "dobra-dor",         tag: "Capítulo 02", label: "Parar de travar agora", hint: "Sai do loop de dicas salvas" },
-          { id: "dobra-porque",      tag: "Capítulo 03", label: "Consertar meu treino", hint: "Quebro os 5 circuitos hoje" },
-          { id: "dobra-metodo",      tag: "Capítulo 04", label: "Escolher um bloco e cronometrar", hint: "20 a 30 minutos pra começar" },
-          { id: "dobra-recebe",      tag: "Capítulo 05", label: "Baixar os 30 exercícios", hint: "Acesso imediato por R$ 47" },
-          { id: "dobra-praquem",     tag: "Capítulo 06", label: "Sim, é pra mim. Quero", hint: "7 dias de garantia" },
-          { id: "dobra-carta",       tag: "Capítulo 08", label: "Aceitar o convite da Flávia", hint: "Comece hoje mesmo" },
-          { id: "dobra-autoridade",  tag: "Capítulo 09", label: "Treinar com quem ensinou 8 mil", hint: "20+ anos de palco" },
-          { id: "dobra-faq",         tag: "Capítulo 10", label: "Tirei dúvidas, quero garantir", hint: "Reembolso em 7 dias" },
+          { id: "dobra-dor",         tag: "Capítulo 02", label: "Parar de travar",       hint: "Sai do loop de dicas salvas" },
+          { id: "dobra-porque",      tag: "Capítulo 03", label: "Corrigir meu treino",   hint: "Quebro os 5 erros hoje" },
+          { id: "dobra-metodo",      tag: "Capítulo 04", label: "Treinar 20 minutos",    hint: "Escolho um bloco e cronometro" },
+          { id: "dobra-recebe",      tag: "Capítulo 05", label: "Baixar os exercícios",  hint: "Acesso imediato" },
+          { id: "dobra-praquem",     tag: "Capítulo 06", label: "É pra mim, quero",      hint: "7 dias de garantia" },
+          { id: "dobra-carta",       tag: "Capítulo 08", label: "Começar pela Flávia",   hint: "Mesma trilha que ela usou" },
+          { id: "dobra-autoridade",  tag: "Capítulo 09", label: "Treinar com a Flávia",  hint: "8 mil alunos formados" },
+          { id: "dobra-faq",         tag: "Capítulo 10", label: "Sem dúvidas, garantir", hint: "Reembolso em 7 dias" },
         ]}
       />
     </main>
