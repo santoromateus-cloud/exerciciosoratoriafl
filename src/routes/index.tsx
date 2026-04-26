@@ -79,12 +79,22 @@ const faqs = [
 
 /* ===== Reusable bits ===== */
 
-function CTAButton({ label = "QUERO AGORA", className = "" }: { label?: string; className?: string }) {
+function CTAButton({
+  label = "QUERO AGORA",
+  className = "",
+  to = "checkout",
+}: {
+  label?: string;
+  className?: string;
+  to?: "checkout" | "offer";
+}) {
+  const href = to === "checkout" ? CHECKOUT_URL : "#oferta";
+  const isExternal = href.startsWith("http");
   return (
     <a
-      href={CHECKOUT_URL}
-      target="_blank"
-      rel="noopener noreferrer"
+      href={href}
+      target={isExternal ? "_blank" : undefined}
+      rel={isExternal ? "noopener noreferrer" : undefined}
       className={`group relative inline-flex w-full items-center justify-center overflow-hidden rounded-full bg-gradient-cta px-8 py-5 text-center text-base font-bold uppercase tracking-[0.18em] text-navy shadow-gold transition-transform hover:scale-[1.02] active:scale-[0.99] sm:text-lg ${className}`}
       style={{ minHeight: 56 }}
     >
@@ -176,9 +186,7 @@ function SalesPage() {
             <span className="numeral-display tabular-nums">{now}</span>
           </div>
           <a
-            href={CHECKOUT_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#oferta"
             className="rounded-full border border-foreground/30 px-3 py-1 text-foreground/80 transition hover:border-gold hover:text-gold-deep"
           >
             R$ 47
@@ -236,7 +244,7 @@ function SalesPage() {
               </div>
 
               <div className="reveal reveal-delay-3 mt-10 max-w-sm">
-                <CTAButton label="começar o treino" />
+                <CTAButton label="começar o treino" to="offer" />
                 <div className="mt-4 flex items-center gap-3 text-xs uppercase tracking-[0.2em] text-cream/60">
                   <span className="inline-flex h-1.5 w-1.5 rounded-full bg-gold" />
                   acesso imediato
@@ -723,12 +731,12 @@ function SalesPage() {
         href={CHECKOUT_URL}
         hideOverIds={["dobra-hero", "oferta", "dobra-final"]}
         items={[
-          { id: "dobra-depoimentos", tag: "Capítulo 01", label: "Quero esse resultado", hint: "Voz firme em 1 a 2 horas" },
-          { id: "dobra-dor",         tag: "Capítulo 02", label: "Parar de travar",       hint: "Sai do loop de dicas salvas" },
-          { id: "dobra-porque",      tag: "Capítulo 03", label: "Corrigir meu treino",   hint: "Quebro os 5 erros hoje" },
-          { id: "dobra-metodo",      tag: "Capítulo 04", label: "Treinar 20 minutos",    hint: "Escolho um bloco e cronometro" },
-          { id: "dobra-recebe",      tag: "Capítulo 05", label: "Baixar os exercícios",  hint: "Acesso imediato" },
-          { id: "dobra-praquem",     tag: "Capítulo 06", label: "É pra mim, quero",      hint: "7 dias de garantia" },
+          { id: "dobra-depoimentos", tag: "Capítulo 01", label: "Quero esse resultado", hint: "Voz firme em 1 a 2 horas", href: "#oferta" },
+          { id: "dobra-dor",         tag: "Capítulo 02", label: "Parar de travar",       hint: "Sai do loop de dicas salvas", href: "#oferta" },
+          { id: "dobra-porque",      tag: "Capítulo 03", label: "Corrigir meu treino",   hint: "Quebro os 5 erros hoje",      href: "#oferta" },
+          { id: "dobra-metodo",      tag: "Capítulo 04", label: "Treinar 20 minutos",    hint: "Escolho um bloco e cronometro", href: "#oferta" },
+          { id: "dobra-recebe",      tag: "Capítulo 05", label: "Baixar os exercícios",  hint: "Acesso imediato",             href: "#oferta" },
+          { id: "dobra-praquem",     tag: "Capítulo 06", label: "É pra mim, quero",      hint: "7 dias de garantia",          href: "#oferta" },
           { id: "dobra-carta",       tag: "Capítulo 08", label: "Começar pela Flávia",   hint: "Mesma trilha que ela usou" },
           { id: "dobra-autoridade",  tag: "Capítulo 09", label: "Treinar com a Flávia",  hint: "8 mil alunos formados" },
           { id: "dobra-faq",         tag: "Capítulo 10", label: "Sem dúvidas, garantir", hint: "Reembolso em 7 dias" },
