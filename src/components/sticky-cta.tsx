@@ -90,10 +90,10 @@ export function StickyCTA({
         </span>
 
         <div className="flex min-w-0 flex-1 flex-col text-left leading-tight">
-          <span className="sticky-cta__label text-[10px] font-semibold uppercase tracking-[0.28em] text-navy/70">
+          <span className="sticky-cta__label text-[9px] font-semibold uppercase tracking-[0.24em] text-navy/70 sm:text-[10px] sm:tracking-[0.28em]">
             {active.tag}
           </span>
-          <span className="sticky-cta__label truncate font-display text-sm font-bold uppercase tracking-[0.08em] sm:text-base">
+          <span className="sticky-cta__label truncate font-display text-[13px] font-bold uppercase tracking-[0.06em] sm:text-base sm:tracking-[0.08em]">
             {active.label}
           </span>
           {active.hint ? (
@@ -103,9 +103,13 @@ export function StickyCTA({
           ) : null}
         </div>
 
-        <span className="ml-auto inline-flex shrink-0 items-center gap-2 rounded-full bg-navy px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.22em] text-gold sm:text-xs">
+        <span className="ml-auto hidden shrink-0 items-center gap-2 rounded-full bg-navy px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.22em] text-gold sm:inline-flex sm:text-xs">
           <span className="inline-flex h-1.5 w-1.5 animate-pulse rounded-full bg-gold" />
           R$ 47
+        </span>
+
+        <span className="ml-2 inline-flex shrink-0 items-center justify-center rounded-full bg-navy px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-gold sm:hidden">
+          R$47
         </span>
 
         <span className="pointer-events-none absolute inset-y-0 -left-1/3 w-1/3 rotate-12 bg-white/40 blur-md transition-transform duration-700 group-hover:translate-x-[400%]" />
