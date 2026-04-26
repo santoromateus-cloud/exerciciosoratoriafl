@@ -398,7 +398,7 @@ function SalesPage() {
       </section>
 
       {/* ============== HOW IT WORKS ============== */}
-      <section className="bg-background py-20 sm:py-28">
+      <section id="dobra-metodo" className="bg-background py-20 sm:py-28">
         <div className="mx-auto max-w-5xl px-5">
           <div className="reveal flex flex-wrap items-end justify-between gap-6">
             <SectionMark number="04" label="O método em três passos" className="text-foreground/70" />
