@@ -130,13 +130,13 @@ function SalesPage() {
           </p>
 
           <div className="relative mx-auto mt-10 flex max-w-sm justify-center">
-            <div className="absolute inset-x-0 bottom-0 mx-auto h-8 w-3/4 rounded-full bg-navy/20 blur-2xl" />
+            <div className="absolute inset-x-0 bottom-0 mx-auto h-10 w-3/4 rounded-full bg-navy/30 blur-3xl" />
             <img
               src={productMockup}
               alt="Mockup do ebook 30 Exercícios de Confiança para Falar em Público"
-              className="relative w-full max-w-[320px] -rotate-3 drop-shadow-2xl animate-float"
-              width={928}
-              height={1152}
+              className="relative w-full max-w-[360px] drop-shadow-2xl animate-float"
+              width={512}
+              height={512}
             />
           </div>
 
