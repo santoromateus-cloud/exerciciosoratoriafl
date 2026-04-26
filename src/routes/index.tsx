@@ -435,7 +435,7 @@ function SalesPage() {
       </section>
 
       {/* ============== WHAT YOU GET ============== */}
-      <section className="relative overflow-hidden bg-secondary/40 py-20 sm:py-28">
+      <section id="dobra-recebe" className="relative overflow-hidden bg-secondary/40 py-20 sm:py-28">
         <div className="mx-auto max-w-4xl px-5">
           <SectionMark number="05" label="O que você recebe" className="reveal text-foreground/70" />
           <div className="reveal mt-10 grid items-center gap-10 rounded-[2rem] border border-foreground/10 bg-card p-8 sm:grid-cols-[auto_1fr] sm:p-12 shadow-soft">
