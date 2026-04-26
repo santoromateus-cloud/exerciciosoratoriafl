@@ -158,8 +158,41 @@
     border-color: var(--color-border);
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
   }
 }
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .bg-gradient-cta { background-image: var(--gradient-cta); }
+  .bg-gradient-navy { background-image: var(--gradient-navy); }
+  .bg-gradient-hero { background-image: var(--gradient-hero); }
+  .shadow-soft { box-shadow: var(--shadow-soft); }
+  .shadow-gold { box-shadow: var(--shadow-gold); }
+}
+
+@keyframes pulse-gold {
+  0%, 100% { box-shadow: 0 0 0 0 oklch(0.78 0.13 75 / 0.5); }
+  50% { box-shadow: 0 0 0 14px oklch(0.78 0.13 75 / 0); }
+}
+.animate-pulse-gold { animation: pulse-gold 2.2s ease-out infinite; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(-3deg); }
+  50% { transform: translateY(-10px) rotate(-3deg); }
+}
+.animate-float { animation: float 5s ease-in-out infinite; }
+
