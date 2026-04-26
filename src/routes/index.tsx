@@ -580,7 +580,7 @@ function SalesPage() {
       </section>
 
       {/* ============== PERSONAL LETTER ============== */}
-      <section className="bg-background py-20 sm:py-28">
+      <section id="dobra-carta" className="bg-background py-20 sm:py-28">
         <div className="mx-auto grid max-w-5xl gap-12 px-5 md:grid-cols-[1fr_auto]">
           <div className="reveal">
             <SectionMark number="08" label="Carta da autora" className="text-foreground/70" />
