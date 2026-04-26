@@ -354,7 +354,7 @@ function SalesPage() {
       </section>
 
       {/* ============== WHY ============== */}
-      <section className="relative overflow-hidden bg-gradient-navy py-20 text-cream sm:py-28">
+      <section id="dobra-porque" className="relative overflow-hidden bg-gradient-navy py-20 text-cream sm:py-28">
         <div aria-hidden className="pointer-events-none absolute inset-0" style={{
           backgroundImage:
             "radial-gradient(circle at 20% 30%, oklch(0.78 0.13 75 / 0.12), transparent 45%), radial-gradient(circle at 80% 70%, oklch(0.65 0.14 70 / 0.10), transparent 45%)",
