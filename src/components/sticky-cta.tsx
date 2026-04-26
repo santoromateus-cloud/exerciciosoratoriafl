@@ -79,6 +79,8 @@ export function StickyCTA({
     <a
       key={pulseKey}
       href={href}
+      target={href.startsWith("http") ? "_blank" : undefined}
+      rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
       aria-label={active.label}
       className={`sticky-cta ${visible ? "is-on" : ""} ${visible ? "is-pulse" : ""}`}
     >
