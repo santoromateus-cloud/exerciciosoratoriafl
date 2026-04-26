@@ -671,7 +671,7 @@ function SalesPage() {
       </section>
 
       {/* ============== FINAL CTA ============== */}
-      <section className="relative overflow-hidden bg-gradient-navy py-24 text-cream sm:py-32">
+      <section id="dobra-final" className="relative overflow-hidden bg-gradient-navy py-24 text-cream sm:py-32">
         <div aria-hidden className="absolute inset-0 pointer-events-none" style={{
           backgroundImage:
             "radial-gradient(circle at 50% 50%, oklch(0.78 0.13 75 / 0.22), transparent 55%)",
