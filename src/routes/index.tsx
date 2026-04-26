@@ -697,7 +697,7 @@ function SalesPage() {
       </section>
 
       {/* ============== FOOTER ============== */}
-      <footer className="border-t border-foreground/10 bg-background py-10">
+      <footer className="border-t border-foreground/10 bg-background py-10 pb-28">
         <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-4 px-5 text-[11px] uppercase tracking-[0.3em] text-muted-foreground">
           <div className="flex items-center gap-3">
             <Asterisk className="h-3 w-3 text-gold-deep" />
@@ -707,6 +707,22 @@ function SalesPage() {
           <span>© {new Date().getFullYear()} todos os direitos reservados</span>
         </div>
       </footer>
+
+      {/* ============== STICKY CTA CONTEXTUAL ============== */}
+      <StickyCTA
+        hideOverIds={["dobra-hero", "oferta", "dobra-final"]}
+        items={[
+          { id: "dobra-depoimentos", tag: "Capítulo 01", label: "Quero esse resultado", hint: "Voz firme em 1 a 2 horas" },
+          { id: "dobra-dor",         tag: "Capítulo 02", label: "Parar de travar agora", hint: "Sai do loop de dicas salvas" },
+          { id: "dobra-porque",      tag: "Capítulo 03", label: "Consertar meu treino", hint: "Quebro os 5 circuitos hoje" },
+          { id: "dobra-metodo",      tag: "Capítulo 04", label: "Escolher um bloco e cronometrar", hint: "20 a 30 minutos pra começar" },
+          { id: "dobra-recebe",      tag: "Capítulo 05", label: "Baixar os 30 exercícios", hint: "Acesso imediato por R$ 47" },
+          { id: "dobra-praquem",     tag: "Capítulo 06", label: "Sim, é pra mim. Quero", hint: "7 dias de garantia" },
+          { id: "dobra-carta",       tag: "Capítulo 08", label: "Aceitar o convite da Flávia", hint: "Comece hoje mesmo" },
+          { id: "dobra-autoridade",  tag: "Capítulo 09", label: "Treinar com quem ensinou 8 mil", hint: "20+ anos de palco" },
+          { id: "dobra-faq",         tag: "Capítulo 10", label: "Tirei dúvidas, quero garantir", hint: "Reembolso em 7 dias" },
+        ]}
+      />
     </main>
   );
 }
