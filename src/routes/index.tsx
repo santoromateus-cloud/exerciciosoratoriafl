@@ -283,7 +283,7 @@ function SalesPage() {
       />
 
       {/* ============== TESTIMONIALS ============== */}
-      <section className="bg-background py-20 sm:py-28">
+      <section id="dobra-depoimentos" className="bg-background py-20 sm:py-28">
         <div className="mx-auto max-w-5xl px-5">
           <div className="reveal mb-10 flex flex-wrap items-end justify-between gap-6">
             <SectionMark number="01" label="Quem treinou destravou" className="text-foreground/70" />
