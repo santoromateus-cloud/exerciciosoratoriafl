@@ -615,7 +615,7 @@ function SalesPage() {
       </section>
 
       {/* ============== AUTHORITY ============== */}
-      <section className="relative overflow-hidden bg-secondary/40 py-20 sm:py-28">
+      <section id="dobra-autoridade" className="relative overflow-hidden bg-secondary/40 py-20 sm:py-28">
         <div className="mx-auto max-w-5xl px-5">
           <SectionMark number="09" label="Sobre Flávia Lucas" className="reveal text-foreground/70" />
 
