@@ -458,7 +458,7 @@ function SalesPage() {
       </section>
 
       {/* ============== FOR YOU / NOT FOR YOU ============== */}
-      <section className="bg-background py-20 sm:py-28">
+      <section id="dobra-praquem" className="bg-background py-20 sm:py-28">
         <div className="mx-auto max-w-5xl px-5">
           <SectionMark number="06" label="Confere se serve pra você" className="reveal text-foreground/70" />
           <div className="mt-10 grid gap-8 sm:grid-cols-2">
