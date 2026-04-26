@@ -11,6 +11,7 @@ import {
   SectionMark,
   StampSeal,
 } from "@/components/decorative";
+import { StickyCTA } from "@/components/sticky-cta";
 
 export const Route = createFileRoute("/")({
   component: SalesPage,
@@ -176,7 +177,7 @@ function SalesPage() {
       </div>
 
       {/* ============== HERO ============== */}
-      <section className="relative overflow-hidden bg-gradient-navy pb-24 pt-12 text-cream">
+      <section id="dobra-hero" className="relative overflow-hidden bg-gradient-navy pb-24 pt-12 text-cream">
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0"
@@ -282,7 +283,7 @@ function SalesPage() {
       />
 
       {/* ============== TESTIMONIALS ============== */}
-      <section className="bg-background py-20 sm:py-28">
+      <section id="dobra-depoimentos" className="bg-background py-20 sm:py-28">
         <div className="mx-auto max-w-5xl px-5">
           <div className="reveal mb-10 flex flex-wrap items-end justify-between gap-6">
             <SectionMark number="01" label="Quem treinou destravou" className="text-foreground/70" />
@@ -324,7 +325,7 @@ function SalesPage() {
       </section>
 
       {/* ============== PAIN ============== */}
-      <section className="relative overflow-hidden bg-secondary/50 py-20 sm:py-28">
+      <section id="dobra-dor" className="relative overflow-hidden bg-secondary/50 py-20 sm:py-28">
         <div aria-hidden className="absolute inset-0 noise opacity-50" />
         <div className="relative mx-auto max-w-3xl px-5">
           <SectionMark number="02" label="Os pensamentos que te param" className="reveal text-foreground/70" />
@@ -353,7 +354,7 @@ function SalesPage() {
       </section>
 
       {/* ============== WHY ============== */}
-      <section className="relative overflow-hidden bg-gradient-navy py-20 text-cream sm:py-28">
+      <section id="dobra-porque" className="relative overflow-hidden bg-gradient-navy py-20 text-cream sm:py-28">
         <div aria-hidden className="pointer-events-none absolute inset-0" style={{
           backgroundImage:
             "radial-gradient(circle at 20% 30%, oklch(0.78 0.13 75 / 0.12), transparent 45%), radial-gradient(circle at 80% 70%, oklch(0.65 0.14 70 / 0.10), transparent 45%)",
@@ -397,7 +398,7 @@ function SalesPage() {
       </section>
 
       {/* ============== HOW IT WORKS ============== */}
-      <section className="bg-background py-20 sm:py-28">
+      <section id="dobra-metodo" className="bg-background py-20 sm:py-28">
         <div className="mx-auto max-w-5xl px-5">
           <div className="reveal flex flex-wrap items-end justify-between gap-6">
             <SectionMark number="04" label="O método em três passos" className="text-foreground/70" />
@@ -434,7 +435,7 @@ function SalesPage() {
       </section>
 
       {/* ============== WHAT YOU GET ============== */}
-      <section className="relative overflow-hidden bg-secondary/40 py-20 sm:py-28">
+      <section id="dobra-recebe" className="relative overflow-hidden bg-secondary/40 py-20 sm:py-28">
         <div className="mx-auto max-w-4xl px-5">
           <SectionMark number="05" label="O que você recebe" className="reveal text-foreground/70" />
           <div className="reveal mt-10 grid items-center gap-10 rounded-[2rem] border border-foreground/10 bg-card p-8 sm:grid-cols-[auto_1fr] sm:p-12 shadow-soft">
@@ -457,7 +458,7 @@ function SalesPage() {
       </section>
 
       {/* ============== FOR YOU / NOT FOR YOU ============== */}
-      <section className="bg-background py-20 sm:py-28">
+      <section id="dobra-praquem" className="bg-background py-20 sm:py-28">
         <div className="mx-auto max-w-5xl px-5">
           <SectionMark number="06" label="Confere se serve pra você" className="reveal text-foreground/70" />
           <div className="mt-10 grid gap-8 sm:grid-cols-2">
@@ -579,7 +580,7 @@ function SalesPage() {
       </section>
 
       {/* ============== PERSONAL LETTER ============== */}
-      <section className="bg-background py-20 sm:py-28">
+      <section id="dobra-carta" className="bg-background py-20 sm:py-28">
         <div className="mx-auto grid max-w-5xl gap-12 px-5 md:grid-cols-[1fr_auto]">
           <div className="reveal">
             <SectionMark number="08" label="Carta da autora" className="text-foreground/70" />
@@ -614,7 +615,7 @@ function SalesPage() {
       </section>
 
       {/* ============== AUTHORITY ============== */}
-      <section className="relative overflow-hidden bg-secondary/40 py-20 sm:py-28">
+      <section id="dobra-autoridade" className="relative overflow-hidden bg-secondary/40 py-20 sm:py-28">
         <div className="mx-auto max-w-5xl px-5">
           <SectionMark number="09" label="Sobre Flávia Lucas" className="reveal text-foreground/70" />
 
@@ -656,7 +657,7 @@ function SalesPage() {
       </section>
 
       {/* ============== FAQ ============== */}
-      <section className="bg-background py-20 sm:py-28">
+      <section id="dobra-faq" className="bg-background py-20 sm:py-28">
         <div className="mx-auto max-w-3xl px-5">
           <SectionMark number="10" label="Perguntas mais frequentes" className="reveal text-foreground/70" />
           <h2 className="reveal mt-6 font-display text-3xl font-bold leading-[1] sm:text-5xl">
@@ -670,7 +671,7 @@ function SalesPage() {
       </section>
 
       {/* ============== FINAL CTA ============== */}
-      <section className="relative overflow-hidden bg-gradient-navy py-24 text-cream sm:py-32">
+      <section id="dobra-final" className="relative overflow-hidden bg-gradient-navy py-24 text-cream sm:py-32">
         <div aria-hidden className="absolute inset-0 pointer-events-none" style={{
           backgroundImage:
             "radial-gradient(circle at 50% 50%, oklch(0.78 0.13 75 / 0.22), transparent 55%)",
@@ -696,7 +697,7 @@ function SalesPage() {
       </section>
 
       {/* ============== FOOTER ============== */}
-      <footer className="border-t border-foreground/10 bg-background py-10">
+      <footer className="border-t border-foreground/10 bg-background py-10 pb-28">
         <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-4 px-5 text-[11px] uppercase tracking-[0.3em] text-muted-foreground">
           <div className="flex items-center gap-3">
             <Asterisk className="h-3 w-3 text-gold-deep" />
@@ -706,6 +707,22 @@ function SalesPage() {
           <span>© {new Date().getFullYear()} todos os direitos reservados</span>
         </div>
       </footer>
+
+      {/* ============== STICKY CTA CONTEXTUAL ============== */}
+      <StickyCTA
+        hideOverIds={["dobra-hero", "oferta", "dobra-final"]}
+        items={[
+          { id: "dobra-depoimentos", tag: "Capítulo 01", label: "Quero esse resultado", hint: "Voz firme em 1 a 2 horas" },
+          { id: "dobra-dor",         tag: "Capítulo 02", label: "Parar de travar agora", hint: "Sai do loop de dicas salvas" },
+          { id: "dobra-porque",      tag: "Capítulo 03", label: "Consertar meu treino", hint: "Quebro os 5 circuitos hoje" },
+          { id: "dobra-metodo",      tag: "Capítulo 04", label: "Escolher um bloco e cronometrar", hint: "20 a 30 minutos pra começar" },
+          { id: "dobra-recebe",      tag: "Capítulo 05", label: "Baixar os 30 exercícios", hint: "Acesso imediato por R$ 47" },
+          { id: "dobra-praquem",     tag: "Capítulo 06", label: "Sim, é pra mim. Quero", hint: "7 dias de garantia" },
+          { id: "dobra-carta",       tag: "Capítulo 08", label: "Aceitar o convite da Flávia", hint: "Comece hoje mesmo" },
+          { id: "dobra-autoridade",  tag: "Capítulo 09", label: "Treinar com quem ensinou 8 mil", hint: "20+ anos de palco" },
+          { id: "dobra-faq",         tag: "Capítulo 10", label: "Tirei dúvidas, quero garantir", hint: "Reembolso em 7 dias" },
+        ]}
+      />
     </main>
   );
 }

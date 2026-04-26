@@ -273,3 +273,43 @@
   background-size: 4px 4px;
 }
 
+/* === Sticky CTA contextual === */
+@keyframes cta-pop {
+  0%   { transform: translate(-50%, 8px) scale(0.96); filter: brightness(1); }
+  40%  { transform: translate(-50%, -4px) scale(1.04); filter: brightness(1.15); }
+  100% { transform: translate(-50%, 0) scale(1);    filter: brightness(1); }
+}
+@keyframes cta-ring {
+  0%   { box-shadow: 0 0 0 0 oklch(0.78 0.13 75 / 0.55), var(--shadow-gold); }
+  100% { box-shadow: 0 0 0 18px oklch(0.78 0.13 75 / 0), var(--shadow-gold); }
+}
+@keyframes cta-label-in {
+  0%   { opacity: 0; transform: translateY(6px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.sticky-cta {
+  position: fixed;
+  left: 50%;
+  bottom: max(1rem, env(safe-area-inset-bottom));
+  transform: translate(-50%, 120%);
+  z-index: 60;
+  width: min(560px, calc(100vw - 1.5rem));
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 600ms cubic-bezier(.2,.8,.2,1), opacity 400ms ease;
+}
+.sticky-cta.is-on {
+  transform: translate(-50%, 0);
+  opacity: 1;
+  pointer-events: auto;
+}
+.sticky-cta.is-pulse {
+  animation: cta-pop 700ms cubic-bezier(.2,.8,.2,1);
+}
+.sticky-cta.is-pulse .sticky-cta__btn {
+  animation: cta-ring 900ms ease-out;
+}
+.sticky-cta__label {
+  animation: cta-label-in 450ms ease both;
+}
+
