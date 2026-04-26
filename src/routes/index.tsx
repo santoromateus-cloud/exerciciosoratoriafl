@@ -246,7 +246,7 @@ function SalesPage() {
               </div>
 
               <div className="reveal reveal-delay-3 mt-10 max-w-sm">
-                <CTAButton label="começar o treino" />
+                <CTAButton label="começar o treino" to="offer" />
                 <div className="mt-4 flex items-center gap-3 text-xs uppercase tracking-[0.2em] text-cream/60">
                   <span className="inline-flex h-1.5 w-1.5 rounded-full bg-gold" />
                   acesso imediato
