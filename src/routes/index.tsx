@@ -79,12 +79,22 @@ const faqs = [
 
 /* ===== Reusable bits ===== */
 
-function CTAButton({ label = "QUERO AGORA", className = "" }: { label?: string; className?: string }) {
+function CTAButton({
+  label = "QUERO AGORA",
+  className = "",
+  to = "checkout",
+}: {
+  label?: string;
+  className?: string;
+  to?: "checkout" | "offer";
+}) {
+  const href = to === "checkout" ? CHECKOUT_URL : "#oferta";
+  const isExternal = href.startsWith("http");
   return (
     <a
-      href={CHECKOUT_URL}
-      target="_blank"
-      rel="noopener noreferrer"
+      href={href}
+      target={isExternal ? "_blank" : undefined}
+      rel={isExternal ? "noopener noreferrer" : undefined}
       className={`group relative inline-flex w-full items-center justify-center overflow-hidden rounded-full bg-gradient-cta px-8 py-5 text-center text-base font-bold uppercase tracking-[0.18em] text-navy shadow-gold transition-transform hover:scale-[1.02] active:scale-[0.99] sm:text-lg ${className}`}
       style={{ minHeight: 56 }}
     >
