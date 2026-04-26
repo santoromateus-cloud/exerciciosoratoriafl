@@ -112,25 +112,43 @@ function SalesPage() {
   return (
     <main className="min-h-screen bg-background text-foreground">
       {/* HERO */}
-      <section className="relative overflow-hidden bg-gradient-hero pb-12 pt-10 sm:pt-16">
-        <div className="absolute inset-0 -z-10 opacity-40" style={{
-          backgroundImage: "radial-gradient(circle at 20% 10%, oklch(0.78 0.13 75 / 0.18), transparent 50%), radial-gradient(circle at 80% 80%, oklch(0.24 0.06 265 / 0.08), transparent 50%)",
-        }} />
-        <div className="mx-auto max-w-3xl px-5">
+      <section className="relative overflow-hidden bg-gradient-navy pb-20 pt-10 text-cream sm:pt-16">
+        {/* Glow dourado em harmonia com o mockup */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0"
+          style={{
+            backgroundImage:
+              "radial-gradient(ellipse at 50% 55%, oklch(0.78 0.13 75 / 0.28), transparent 55%), radial-gradient(circle at 15% 15%, oklch(0.78 0.13 75 / 0.15), transparent 45%), radial-gradient(circle at 85% 85%, oklch(0.65 0.14 70 / 0.18), transparent 50%)",
+          }}
+        />
+        {/* Textura sutil */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 opacity-[0.18] mix-blend-overlay"
+          style={{
+            backgroundImage: "radial-gradient(oklch(1 0 0 / 0.4) 1px, transparent 1px)",
+            backgroundSize: "3px 3px",
+          }}
+        />
+
+        <div className="relative mx-auto max-w-3xl px-5">
           <div className="mb-5 flex justify-center">
-            <span className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-gold-deep">
+            <span className="inline-flex items-center gap-2 rounded-full border border-gold/50 bg-gold/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-gold">
               <Sparkles className="h-3.5 w-3.5" /> Produto Instantâneo
             </span>
           </div>
-          <h1 className="text-balance text-center font-display text-4xl font-bold leading-[1.05] text-navy sm:text-5xl md:text-6xl">
-            Fale em público sem travar em <em className="not-italic text-gold-deep">2 horas</em> — sem decorar roteiro
+          <h1 className="text-balance text-center font-display text-4xl font-bold leading-[1.05] text-cream sm:text-5xl md:text-6xl">
+            Fale em público sem travar em <em className="not-italic text-gold">2 horas</em> — sem decorar roteiro
           </h1>
-          <p className="mx-auto mt-6 max-w-xl text-balance text-center text-lg leading-relaxed text-muted-foreground sm:text-xl">
-            Voz firme na próxima apresentação, reunião da empresa ou entrevista, com <strong className="text-foreground">30 exercícios práticos</strong>.
+          <p className="mx-auto mt-6 max-w-xl text-balance text-center text-lg leading-relaxed text-cream/75 sm:text-xl">
+            Voz firme na próxima apresentação, reunião da empresa ou entrevista, com <strong className="text-cream">30 exercícios práticos</strong>.
           </p>
 
           <div className="relative mx-auto mt-10 flex max-w-sm justify-center">
-            <div className="absolute inset-x-0 bottom-0 mx-auto h-10 w-3/4 rounded-full bg-navy/30 blur-3xl" />
+            {/* Halo dourado atrás do livro */}
+            <div className="absolute inset-0 m-auto h-72 w-72 rounded-full bg-gold/25 blur-3xl" />
+            <div className="absolute inset-x-0 bottom-2 mx-auto h-10 w-3/4 rounded-full bg-black/50 blur-3xl" />
             <img
               src={productMockup}
               alt="Mockup do ebook 30 Exercícios de Confiança para Falar em Público"
@@ -142,12 +160,18 @@ function SalesPage() {
 
           <div className="mx-auto mt-10 max-w-sm">
             <CTAButton label="QUERO MINHA VOZ FIRME" />
-            <p className="mt-3 text-center text-sm text-muted-foreground">
-              <ShieldCheck className="mr-1 inline h-4 w-4 text-success" />
+            <p className="mt-3 text-center text-sm text-cream/70">
+              <ShieldCheck className="mr-1 inline h-4 w-4 text-gold" />
               7 dias de garantia • Acesso imediato
             </p>
           </div>
         </div>
+
+        {/* Transição suave para a próxima seção clara */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-b from-transparent to-background"
+        />
       </section>
 
       {/* TESTIMONIALS */}
