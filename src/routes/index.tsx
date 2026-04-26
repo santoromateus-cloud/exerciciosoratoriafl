@@ -177,7 +177,7 @@ function SalesPage() {
       </div>
 
       {/* ============== HERO ============== */}
-      <section className="relative overflow-hidden bg-gradient-navy pb-24 pt-12 text-cream">
+      <section id="dobra-hero" className="relative overflow-hidden bg-gradient-navy pb-24 pt-12 text-cream">
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0"
