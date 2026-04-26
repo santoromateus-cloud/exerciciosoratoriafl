@@ -13,6 +13,9 @@ import {
 } from "@/components/decorative";
 import { StickyCTA } from "@/components/sticky-cta";
 
+const CHECKOUT_URL =
+  "https://payfast.greenn.com.br/7jqbmqm/offer/g1gqIj?b_id_1=642gg2c&b_offer_1=eQz0LC&b_id_2=gcyx8uj&b_offer_2=8OSSjZ";
+
 export const Route = createFileRoute("/")({
   component: SalesPage,
 });
@@ -79,7 +82,9 @@ const faqs = [
 function CTAButton({ label = "QUERO AGORA", className = "" }: { label?: string; className?: string }) {
   return (
     <a
-      href="#oferta"
+      href={CHECKOUT_URL}
+      target="_blank"
+      rel="noopener noreferrer"
       className={`group relative inline-flex w-full items-center justify-center overflow-hidden rounded-full bg-gradient-cta px-8 py-5 text-center text-base font-bold uppercase tracking-[0.18em] text-navy shadow-gold transition-transform hover:scale-[1.02] active:scale-[0.99] sm:text-lg ${className}`}
       style={{ minHeight: 56 }}
     >
@@ -170,7 +175,12 @@ function SalesPage() {
             <span>edição instantânea</span>
             <span className="numeral-display tabular-nums">{now}</span>
           </div>
-          <a href="#oferta" className="rounded-full border border-foreground/30 px-3 py-1 text-foreground/80 transition hover:border-gold hover:text-gold-deep">
+          <a
+            href={CHECKOUT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full border border-foreground/30 px-3 py-1 text-foreground/80 transition hover:border-gold hover:text-gold-deep"
+          >
             R$ 47
           </a>
         </div>
@@ -710,6 +720,7 @@ function SalesPage() {
 
       {/* ============== STICKY CTA CONTEXTUAL ============== */}
       <StickyCTA
+        href={CHECKOUT_URL}
         hideOverIds={["dobra-hero", "oferta", "dobra-final"]}
         items={[
           { id: "dobra-depoimentos", tag: "Capítulo 01", label: "Quero esse resultado", hint: "Voz firme em 1 a 2 horas" },
