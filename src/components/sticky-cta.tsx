@@ -9,6 +9,8 @@ export type StickyCtaItem = {
   label: string;
   /** small line under the button */
   hint?: string;
+  /** optional per-item destination; falls back to the global href */
+  href?: string;
 };
 
 /**
@@ -76,11 +78,15 @@ export function StickyCTA({
   if (!active) return null;
 
   return (
+  const targetHref = active.href ?? href;
+  const isExternal = targetHref.startsWith("http");
+
+  return (
     <a
       key={pulseKey}
-      href={href}
-      target={href.startsWith("http") ? "_blank" : undefined}
-      rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
+      href={targetHref}
+      target={isExternal ? "_blank" : undefined}
+      rel={isExternal ? "noopener noreferrer" : undefined}
       aria-label={active.label}
       className={`sticky-cta ${visible ? "is-on" : ""} ${visible ? "is-pulse" : ""}`}
     >
