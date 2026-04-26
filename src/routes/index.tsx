@@ -657,7 +657,7 @@ function SalesPage() {
       </section>
 
       {/* ============== FAQ ============== */}
-      <section className="bg-background py-20 sm:py-28">
+      <section id="dobra-faq" className="bg-background py-20 sm:py-28">
         <div className="mx-auto max-w-3xl px-5">
           <SectionMark number="10" label="Perguntas mais frequentes" className="reveal text-foreground/70" />
           <h2 className="reveal mt-6 font-display text-3xl font-bold leading-[1] sm:text-5xl">
