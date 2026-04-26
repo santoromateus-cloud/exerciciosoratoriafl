@@ -11,6 +11,7 @@ import {
   SectionMark,
   StampSeal,
 } from "@/components/decorative";
+import { StickyCTA } from "@/components/sticky-cta";
 
 export const Route = createFileRoute("/")({
   component: SalesPage,
